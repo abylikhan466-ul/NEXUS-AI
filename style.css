@@ -1,0 +1,112 @@
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 280px;
+        min-width: 0;
+        height: 100dvh;
+        transform: translateX(-105%);
+        transition: transform 0.25s ease;
+        z-index: 100;
+        box-shadow: 10px 0 35px #0008;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: #0009;
+        z-index: 90;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s ease;
+    }
+
+    .sidebar-backdrop.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .topbar {
+        height: 58px;
+        min-height: 58px;
+        padding: 0 12px;
+        gap: 12px;
+    }
+
+    .chat-area {
+        padding: 18px 12px;
+    }
+
+    .welcome {
+        margin: 25px auto;
+    }
+
+    .orb-container {
+        width: 125px;
+        height: 125px;
+    }
+
+    .orb {
+        width: 75px;
+        height: 75px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    .welcome-description {
+        font-size: 13px;
+    }
+
+    .suggestion {
+        padding: 10px;
+    }
+
+    .message-content {
+        max-width: 88%;
+        font-size: 13px;
+    }
+
+    .input-section {
+        padding: 8px 10px 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        transform: none;
+    }
+
+    .sidebar-backdrop {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .brand-text h2 {
+        font-size: 18px;
+    }
+
+    .welcome h1 {
+        font-size: 28px;
+    }
+
+    .top-title {
+        font-size: 12px;
+    }
+
+    .model-label {
+        font-size: 8px;
+    }
+}
